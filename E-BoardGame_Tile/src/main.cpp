@@ -25,11 +25,6 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 // Argument 1 = Number of pixels in NeoPixel strip
 // Argument 2 = Arduino pin number (most are valid)
 // Argument 3 = Pixel type flags, add together as needed:
-//   NEO_KHZ800  800 KHz bitstream (most NeoPixel products w/WS2812 LEDs)
-//   NEO_KHZ400  400 KHz (classic 'v1' (not v2) FLORA pixels, WS2811 drivers)
-//   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
-//   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
-//   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products
 
 byte command = 0b0;
 
@@ -84,9 +79,7 @@ void requestEvent()
   {
     // for (byte i = 0; i < 2; i++)
     //{
-    //  Serial.print("Check\n");
-    //  Serial.print(portValue);
-    //  Serial.print("\n");
+    Serial.print("Check\n");
     portCheck();
     Wire.write(portValue[0]);
     //}

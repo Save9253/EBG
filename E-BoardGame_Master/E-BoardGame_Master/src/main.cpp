@@ -22,6 +22,7 @@ void shiftColor()
   Serial.print("Requesting color shift\n");
   Wire.write(0b110);      // sends one byte
   Wire.endTransmission(); // stop transmitting
+  Wire.requestFrom(4, 0); // without this request the command would not work for some reason
 }
 
 void setup()
